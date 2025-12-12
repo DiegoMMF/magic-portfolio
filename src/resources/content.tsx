@@ -1,21 +1,21 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Diego",
+  lastName: "Maldini Freyre",
+  name: "Diego M. Maldini Freyre",
+  role: "AI Transformation & Automation Partner",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "diegomaldinifreyre@gmail.com",
+  location: "America/Argentina/Cordoba", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Spanish", "Portuguese"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Updates about AI, automation, and digital transformation</>,
 };
 
 const social: Social = [
@@ -23,27 +23,15 @@ const social: Social = [
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/diegommf",
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/diegommf",
     essential: true,
   },
   {
@@ -60,23 +48,23 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Catalyzing efficiency and innovation through AI & Automation</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Latest work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Diego, an AI Engineer and Full-Stack Developer specializing in <Text as="span" size="xl" weight="strong">AI Agents, LLMs, and Automation</Text>. <br /> I transform businesses through intelligent solutions at the intersection of AI, DLTs, and modern development.
 </>
   ),
 };
@@ -85,7 +73,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Villa Dolores, Córdoba, Argentina`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,7 +82,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,9 +90,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Diego is a Digital Transformation Executive and Technology Partner with over 5 years of experience 
+        in software development and teaching. University Technician in Information Technology, passionate 
+        about the convergence of AI, DLTs, and Automation, focusing on AI Agents, LLMs, Smart Contracts, 
+        and n8n workflows. Published author of 4 books with proven leadership in solution identification 
+        and project management.
       </>
     ),
   },
@@ -113,42 +103,63 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Freelance",
+        timeframe: "2025 - Present",
+        role: "AI Engineer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <span key="1">
+            Leading research and implementation of solutions at the intersection of AI, DLTs, and Real Estate, 
+            exploring use cases for smart contracts and automation.
+          </span>,
+          <span key="2">
+            Developing AI Agent prototypes using LLM technologies for automation and transformation tasks.
+          </span>,
+          <span key="3">
+            Applying problem-solving approach to identify optimization opportunities in freelance projects.
+          </span>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Slik",
+        timeframe: "2022 - 2025",
+        role: "Senior Frontend Developer",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <span key="1">
+            Responsible for development and implementation of advanced user interfaces with React and Next.js.
+          </span>,
+          <span key="2">
+            Mentoring junior developers and applying code standards and best practices.
+          </span>,
+          <span key="3">
+            Contributing to frontend architecture, ensuring scalability and performance.
+          </span>,
+        ],
+        images: [],
+      },
+      {
+        company: "Freelance / Inventa",
+        timeframe: "2018 - 2022",
+        role: "Software Developer / React Developer",
+        achievements: [
+          <span key="1">
+            Software and React application development for clients, managing the full development lifecycle.
+          </span>,
+          <span key="2">
+            Teaching experience (Full-Stack MERN) at Digital House, training the next generation of developers.
+          </span>,
+        ],
+        images: [],
+      },
+      {
+        company: "Networking de Emprendedores de Traslasierra",
+        timeframe: "2018 - 2020",
+        role: "Founding Director",
+        achievements: [
+          <span key="1">
+            Founded and directed a networking initiative to foster business growth and community management, 
+            demonstrating leadership capacity and strategic vision.
+          </span>,
         ],
         images: [],
       },
@@ -156,77 +167,74 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universidad de Palermo",
+        description: <>Engineer's Degree in Artificial Intelligence (Planned: 2025 - 2029)</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Universidad Tecnológica Nacional (FRSF)",
+        description: <>University Technician in Information Technology (2021 - 2024)</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Key Competencies",
     skills: [
       {
-        title: "Figma",
+        title: "Artificial Intelligence & DLT",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Expertise in Generative AI, LLMs, AI Agents, Blockchain/DLT, and Smart Contracts (Solidity, EVM). 
+          Strong foundation in Data Science and Machine Learning fundamentals.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "AI",
+            icon: "openai",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Blockchain",
+            icon: "ethereum",
           },
         ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Automation & DevOps",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Professional workflows with n8n, Docker (Fundamentals & Advanced), Cloud Computing (AWS: EC2, IAM, Networks; GCS), 
+          and Full-Stack Development with React, Next.js, and MERN stack.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Docker",
+            icon: "docker",
+          },
+          {
+            name: "AWS",
+            icon: "aws",
+          },
+          {
+            name: "React",
+            icon: "react",
           },
           {
             name: "Next.js",
             icon: "nextjs",
           },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
+      },
+      {
+        title: "Strategy & Leadership",
+        description: (
+          <>Systems & Solutions Analysis, Project Management (Scrum), Stakeholder Management, 
+          and Technology Management. Published author of 4 books with proven communication skills.</>
+        ),
+        tags: [],
+        images: [],
       },
     ],
   },
@@ -235,7 +243,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about AI, automation and tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -245,7 +253,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `AI, automation and development projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -257,48 +265,7 @@ const gallery: Gallery = {
   description: `A photo collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  images: [],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
